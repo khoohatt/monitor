@@ -1,0 +1,286 @@
+/* для обновления: ctrl + f5 */
+
+/* 
+темный синий: #3b97ff
+синий: #c7e1ff;
+светлый синий: #dfeeff;
+*/
+
+.submitButton {
+    border: 1px solid rgb(190, 190, 190);
+    background-color: #ececec;
+}
+
+.historyButton {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(81, 139, 255);
+    transition-duration: 0.4s;
+    z-index: 100;
+}
+.historyButton:hover {
+    background-color: rgb(174, 174, 174);
+    color: white;
+}
+
+.searchButton {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 15px;
+    height: 20px;
+    width: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.alertButton { 
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 15px;
+
+    text-decoration: none;
+    display: inline-block;
+
+    font-weight: bold;
+    font-family: Georgia;
+    display: inline-block;  
+    text-align: center; 
+    width: 60px; 
+    cursor: pointer;
+    border: 0px solid #3b97ff;
+    background-color: transparent;
+    padding-bottom: 1px;
+}
+.alertButton:hover {
+    color: white;
+}
+
+#data {
+    width: 100%;
+}
+
+#dataTable {
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #c7e1ff;
+    width: 100%;
+    top: 3px; 
+    right: 3px;
+}
+
+#procsTable {
+    border-collapse: collapse;
+    border: 1px solid #c7e1ff;
+    width: 100%;    
+    position: relative;
+}
+
+#tableBorders {
+    border-collapse: collapse;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#procsTable td {
+    width: 20%;
+    padding: 10px 20px;
+    text-align: left;
+    border: 1px solid #c7e1ff;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+td:hover {
+    white-space: unset;
+    text-overflow: unset;
+}
+
+#dataTable td  {
+    width: 20%;
+    padding: 10px 20px;
+    text-align: left;
+    border: 1px solid #c7e1ff;
+}
+
+#mergeTable td  {
+    width: 25%;
+    margin-top: 2%;
+    vertical-align:top;
+    text-align:start;
+}
+
+#mergeTable th  {
+    width: 25%;
+}
+
+#mergeTable {
+    width: 100%;
+}
+
+[tip] .tooltip {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px;
+    background: #444;
+    border: 1px solid #222;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0s;
+    transition-property:  opacity, visibility; 
+    transition-duration: .3s, .3s;
+    transition-delay: 1.5s, 0s; 
+    color: white;
+    min-width: 120px;
+}
+  
+[tip]:hover .tooltip {
+    z-index: 100;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen {
+    thead {
+        position: sticky;
+        z-index: 100;
+        top: 0px;
+    }
+}
+
+thead {
+    background-color: #c7e1ff;
+}
+
+th {
+    font-family: Georgia;
+    padding: 10px 20px;
+    position: sticky;
+    z-index: 100;
+    width: 20%;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #c7e1ff;
+    position: relative;
+}
+
+#header_fixed {
+    width: 100%; 
+    border-collapse: collapse;
+    position: fixed;
+    top: 0;
+    display: none;
+    padding: 1em;
+}
+
+#procsTable tbody  tr:nth-child(odd) {
+    background-color: #dfeeff;
+}
+
+#procsTable tbody tr:nth-child(even) {
+    background-color: white;
+    border-top: 0;
+}
+
+.input_panels {
+    visibility: hidden;
+    border: 1px solid #c7e1ff;
+    color: white;
+}
+
+h1 {
+    font-family: Georgia;
+    /* font-size: large; */
+    margin-top: 2%;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.nameDiv {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.searchInput {
+    left: 15px;
+    right: 15px;
+    top: 6px;
+    bottom: 6px;
+    position: absolute; 
+}
+
+#dtpButton {
+    position: absolute;
+    font-weight: bold;
+    height: 32px;
+    width: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px; 
+    pointer-events: none;
+    font-family: Georgia;
+}
+
+.dtpicker { 
+    margin: 10px 20px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #3b97ff;
+    
+}
+.dtpicker:hover {
+    background-color: #3b97ff;
+    pointer-events: none;
+}
+
+.dtpicker:hover + label {
+    color: white;
+}
+
+#dtpDiv {
+    position: relative;
+    width: fit-content;
+}
+
+
+::-webkit-datetime-edit-fields-wrapper { display: none; }
+::-webkit-datetime-edit { display: none; }
+::-webkit-datetime-edit-text { display: none; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { width: 100%; opacity: 0%;}
+
+#ready {
+    top: 2em;
+    display: none;
+    position: fixed;
+    width: 100%; 
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 101;
+    border: 0px solid #3b97ff;
+    background-color: rgb(240, 198, 187);
+ }
+
+.message { 
+    text-align: center;
+}
+
+@media print
+{    
+    .no-print
+    {
+        display: none !important;
+    }
+}
